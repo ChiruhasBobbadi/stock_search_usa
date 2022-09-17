@@ -38,7 +38,7 @@ export class WatchlistdisplayComponent implements OnInit {
 
 
           // change this
-          this.http.get('http://localhost:3000/summary?keyword='+tick).subscribe ((data) => {
+          this.http.get('http://ec2-18-234-143-36.compute-1.amazonaws.com/summary?keyword='+tick).subscribe ((data) => {
             var datab = {};
 
 
@@ -83,7 +83,7 @@ deleteElement (ticke) {
       var tick = this.watchListItems[+indx]['ticker'];
 
       // change this
-      this.http.get('http://localhost:3000/summary?keyword='+tick).subscribe ((data) =>{
+      this.http.get('http://ec2-18-234-143-36.compute-1.amazonaws.com/summary?keyword='+tick).subscribe ((data) =>{
 
         this.watchListItems[+indx]['lastPrice'] = data['lastPrice'];
         this.watchListItems[+indx]['change'] = data['change']

@@ -65,7 +65,7 @@ export class NewsComponent implements OnInit {
     //this.twitterText = this.title +" "+ this.url;
     this.twitterURL += encodeURIComponent (this.title) + '%20' + encodeURIComponent (this.url);
     /*
-    this.http.get ('http://localhost:3000/news').subscribe ((data) => {
+    this.http.get ('http://ec2-18-234-143-36.compute-1.amazonaws.com/news').subscribe ((data) => {
       this.urlToImage = data[0]['urlToImage']
       this.description = data[0]['description'];
       this.title = data[0]['title'];

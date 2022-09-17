@@ -32,7 +32,7 @@ export class HomePageComponentComponent implements OnInit {
 
 
         // change this
-        switchMap(value => this.http.get("http://localhost:3000/autocomplete?keyword=" + value)
+        switchMap(value => this.http.get("http://ec2-18-234-143-36.compute-1.amazonaws.com/autocomplete?keyword=" + value)
           .pipe(
             finalize(() => {
               this.isLoading = false

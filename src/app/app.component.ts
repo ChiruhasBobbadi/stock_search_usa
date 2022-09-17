@@ -41,7 +41,7 @@ export class AppComponent implements OnInit {
     this.isFetcing = true;
 
     // change endpoint
-    this.http.get('http://localhost:3000/autocomplete').subscribe (stockData => {
+    this.http.get('http://ec2-18-234-143-36.compute-1.amazonaws.com/autocomplete').subscribe (stockData => {
   this.isFetcing = false;
   console.log (stockData);
 }, error => {
