@@ -1,0 +1,31 @@
+<div class = "d-flex flex-column min-vh-100">
+<nav class="navbar navbar-expand-md navbar-fixed-top" style ="background-color: rgb(111,79,251);">
+
+  <a (click) ="chalMaiChala()" class = "navbar-brand"  href = "#" style ="color:white;"> Stocks Search</a>
+
+
+  <button class="navbar-toggler" style ="color: white;" type="button" (click)="isMenuCollapsed = !isMenuCollapsed">
+    &#9776;
+  </button>
+
+  <div [ngbCollapse]="isMenuCollapsed" class="collapse navbar-collapse ml-auto">
+  <ul class="navbar-nav ml-auto">
+    <li class="nav-item text-right" >
+      <a class="nav-link" (mouseenter) = "hover1()" (mouseleave) = "leave1()"><button class ="btn" style ="color: 	#DCDCDC; border-radius: 15px;" #searchButton (click) = "searchClicked()"> Search </button></a>
+    </li>
+    <li class="nav-item text-right">
+      <a class="nav-link" (mouseenter) = "hover2()" (mouseleave) = "leave2()"><button class = "btn" style ="color:	#DCDCDC; border-radius: 15px;" #watchListButton (click) = "watchListClicked()">Watchlist </button></a>
+    </li>
+  </ul>
+
+</div>
+</nav>
+
+
+<div class= "container">
+    <router-outlet></router-outlet>
+</div>
+
+
+
+
